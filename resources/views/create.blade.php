@@ -2,13 +2,13 @@
 @section('content')
 <div class="breakout"></div>
 <div class="container">
+    @if ($message = Session::get('success'))
+    <div class="alert alert-success">
+        <p>{{ $message }}</p>
+    </div>
+    @endif
     <div class="row custyle">
     <table class="table table-striped custab">
-        @if ($message = Session::get('success'))
-        <div class="alert alert-success">
-            <p>{{ $message }}</p>
-        </div>
-    @endif
     <thead>
     {{-- <a href="#" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new Supplier</a> --}}
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
@@ -24,34 +24,21 @@
             <th class="text-center">Action</th>
         </tr>
     </thead>
+    @foreach ($suppliers as $supply)
             <tr>
-                <td>1</td>
-                <td>News</td>
-                <td>News Cate</td>
-                <td>News Cate</td>
-                <td>News Cate</td>
-                <td>News Cate</td>
-                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+                <td>{{$supply->id}}</td>
+                <td>{{$supply->name}}</td>
+                <td>{{$supply->contact}}</td>
+                <td>{{$supply->address}}</td>
+                <td>{{$supply->contact_person}}</td>
+                <td>{{$supply->category}}</td>
+                <td class="text-center">
+                    <a class='btn btn-info btn-xs' href="{{ route('suppliers.edit',$supply->id) }}"><span class="glyphicon glyphicon-edit"></span> Edit</a> 
+                    @csrf
+                    <a href="{{ route('suppliers.destroy', $supply->id) }}" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a>
+               </td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>Products</td>
-                <td>Main Products</td>
-                <td>News Cate</td>
-                <td>News Cate</td>
-                <td>News Cate</td>
-                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
-            </tr>
-            
-            <tr>
-                <td>3</td>
-                <td>Blogs</td>
-                <td>Parent Blogs</td>
-                <td>News Cate</td>
-                <td>News Cate</td>
-                <td>News Cate</td>
-                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
-            </tr>
+            @endforeach
     </table>
     </div>
 </div>

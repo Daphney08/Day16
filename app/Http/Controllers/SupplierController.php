@@ -14,11 +14,10 @@ class SupplierController extends Controller
      */
     public function index()
     {
-        // $suppliers = Suppliers::latest()->paginate(5);
+        $suppliers = Suppliers::latest()->paginate(5);
     
-        // return view('create',compact('suppliers'))
-        //     ->with('i', (request()->input('page', 1) - 1) * 5);
-        return view('create');
+        return view('create',compact('suppliers'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -61,7 +60,7 @@ class SupplierController extends Controller
      */
     public function show(Suppliers $suppliers)
     {
-        //
+        return view('create',compact('suppliers'));
     }
 
     /**
@@ -72,7 +71,7 @@ class SupplierController extends Controller
      */
     public function edit(Suppliers $suppliers)
     {
-        //
+        return view('supplier.edit-supplier',compact('suppliers'));
     }
 
     /**
@@ -84,7 +83,18 @@ class SupplierController extends Controller
      */
     public function update(Request $request, Suppliers $suppliers)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'contact'  => 'required',
+            'address'  => 'required',
+            'contact_person'  => 'required',
+            'category'  => 'required'  
+        ]);
+    
+        $suppliers->update($request->all());
+    
+        return redirect()->route('suppliers.index')
+                        ->with('success','Supplier updated successfully');
     }
 
     /**
@@ -93,9 +103,23 @@ class SupplierController extends Controller
      * @param  \App\Models\Suppliers  $suppliers
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Suppliers $suppliers)
+    public function destroy(Suppliers $suppliers, $id)
     {
-        //
+        $sup = Suppliers::find($id); 
+        dd($sup);
+        $sup->delete(); //delete the client
+        return redirect()->route('suppliers.index')
+                        ->with('success','Supplier deleted successfully');
+    }
+
+    public function destroySupply($id)
+    {
+        // $suppliers->delete();
+        $sup = Suppliers::find($id); 
+        $sup->delete(); //delete the client
+    
+        return redirect()->route('suppliers.index')
+                        ->with('success','Supplier deleted successfully');
     }
 }
 // use Illuminate\Http\Request;

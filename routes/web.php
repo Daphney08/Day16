@@ -15,6 +15,8 @@ Route::group(['middleware' => 'guest'], function() {
     Route::get('/',[App\Http\Controllers\CreateController::class,'index'])->name('create');
     //return
     Route::get('/return',[App\Http\Controllers\CreateController::class,'return'])->name('return');
+    //edit
+    //Route::get('/return',[App\Http\Controllers\CreateController::class,'return'])->name('return');
 
 });
 

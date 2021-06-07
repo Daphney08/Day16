@@ -26,7 +26,7 @@ class CreateController extends Controller
     public function index()
     {
        
-        return view('create');
+        return view('welcome');
     }
     public function supplier()
     {
