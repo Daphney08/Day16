@@ -18,8 +18,7 @@ class Supplier extends Model
             'contact',
             'address',
             'contact_person',
-            'category'
-           
+            'category'  
         ];
     }
 }

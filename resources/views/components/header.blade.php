@@ -11,7 +11,7 @@
                 <li><a href="#" class="text-white nav-link px-2 link-dark">Distribution</a></li>
                 <li><a href="#" class="text-white nav-link px-2 link-dark">Asset</a></li>
                 <li><a href="#" class="text-white nav-link px-2 link-dark">Storage</a></li>
-                <li><a href="#" class="text-white nav-link px-2 link-dark">Supplie</a></li>
+                <li><a href="#" class="text-white nav-link px-2 link-dark">Supplier</a></li>
                 </ul>
 
                 <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">

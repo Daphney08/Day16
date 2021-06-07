@@ -87,9 +87,18 @@ class CreateController extends Controller
         return Redirect::route('delivery');
     }
     
+    // public function return()
+    // {
+    //     Return::create(
+    //         $this->request->except('_token')
+    // );
+        
+    //     return Redirect::route('return');
+    // }
+
     public function return()
     {
-        Return::create(
+        Delivery::create(
             $this->request->except('_token')
 
         );
