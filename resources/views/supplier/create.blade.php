@@ -21,19 +21,19 @@
                                 <input type="text" id="supplier" class="form-control" name="name" value="{{ old('name') }}" required>
                             </div> 
                             <div class="col-md-12">
-                                <label for="supplier" class="form-label">contact</label>
+                                <label for="supplier" class="form-label">Contact</label>
                                 <input type="text" id="supplier" class="form-control" name="contact" value="{{ old('contact') }}" required>
                             </div> 
                             <div class="col-md-12">
-                                <label for="supplier" class="form-label">address</label>
+                                <label for="supplier" class="form-label">Address</label>
                                 <input type="text" id="supplier" class="form-control" name="address" value="{{ old('address') }}" required>
                             </div> 
                             <div class="col-md-12">
-                                <label for="supplier" class="form-label">contact_person</label>
+                                <label for="supplier" class="form-label">Contact Person</label>
                                 <input type="text" id="supplier" class="form-control" name="contact_person" value="{{ old('contact_person') }}" required>
                             </div> 
                             <div class="col-md-12">
-                                <label for="supplier" class="form-label">category</label>
+                                <label for="supplier" class="form-label">Category</label>
                                 <input type="text" id="supplier" class="form-control" name="category" value="{{ old('category') }}" required>
                             </div> 
                             
@@ -52,4 +52,3 @@
         </div> 
     </div> 
 @endsection
-© 2021 GitHub, Inc.

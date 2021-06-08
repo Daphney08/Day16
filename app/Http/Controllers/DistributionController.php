@@ -12,7 +12,7 @@ class DistributionController extends Controller
 {
     //declare variable
     protected $request;
-    
+
     public function __construct(Request $request)
     {
         $this->request = $request;
@@ -20,7 +20,7 @@ class DistributionController extends Controller
 
 
     /**
-     * supplier Data Lists
+     * distribution Data Lists
      */
     public function index()
     {
@@ -31,7 +31,7 @@ class DistributionController extends Controller
 
 
     /** 
-     * Create New Supplier Form
+     * Create New distribution Form
     */
     public function create()
     {
@@ -40,13 +40,13 @@ class DistributionController extends Controller
 
 
     /** 
-     * Save New supplier to Database
+     * Save New distribution to Database
     */
     public function store()
     {
         Distribution::create($this->request->except('_token'));
 
-        # Redirect to supplier list with success message
+        # Redirect to distribution list with success message
         return Redirect::route('distribution')->with([
             'success' => "New Record is Successfully Created"
         ]);
@@ -54,7 +54,7 @@ class DistributionController extends Controller
 
 
     /** 
-     * Edit supplier Record Form
+     * Edit distribution Record Form
     */
     public function edit($id){
 
@@ -65,13 +65,13 @@ class DistributionController extends Controller
 
 
     /** 
-     * Update supplier Record to Database
+     * Update distribution Record to Database
     */
     public function update($id){
         # Find reacord with the parameter $id and update the record
         Distribution::where('id', '=', $id)->update($this->request->except('_token'));
 
-        # Redirect to supplier list with success message
+        # Redirect to distribution list with success message
         return Redirect::route('distribution')->with([
             'success' => "Record is successfully updated"
         ]);
@@ -79,15 +79,15 @@ class DistributionController extends Controller
 
 
      /** 
-     * Delete Supplier Record to Database
+     * Delete distribution Record to Database
     */
     public function delete($id){
         # Destory Record
         Distribution::destroy($id);
 
-        # Redirect to supplier list with success message
+        # Redirect to distribution list with success message
         return Redirect::route('distribution')->with([
-            'success' => "Record is cuccessfully deleted"
+            'success' => "Record is successfully deleted"
         ]);
     }
 }

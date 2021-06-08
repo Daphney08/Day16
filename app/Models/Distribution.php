@@ -8,18 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Distribution extends Model
 {
     use HasFactory;
+        
+    //table name
+    protected $table = "distribution";
+    //fields
+     protected $fillable = [
 
-    public function index();
-    {
-        protected $table ='distribution';
+    'requestor_name',
+    'requestor_contact',
+    'purpose',
+    'asset_id',
+    'quantity',
+    'status',
+  
+     ];        
 
-        protected $fillable = [
-            'requestor_name',
-            'requestor_contact',
-            'purpose',
-            'asset_id',
-            'quantity',
-            'Status'
-        ];
-    }
 }

@@ -5,23 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Returns extends Model
+class Deliveries extends Model
 {
     use HasFactory;
         
     //table name
-    protected $table = "returns";
+    protected $table = "deliveries";
     //fields
      protected $fillable = [
 
-    'asset_id',
-    'returned_by',
-    'returned_by_contact',
-    'quantity',
-    'reason',
-   
-
-  
+    'distribution_id',
+    'transportation_id',
+    'date_distributed',
+    'status',  
      ];        
 
 }

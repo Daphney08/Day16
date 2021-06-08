@@ -7,18 +7,21 @@ use Illuminate\Database\Eloquent\Model;
 
 class Supplier extends Model
 {
-    use HasFactory;
+    
 
-    public function index();
-    {
-        protected $table ='supplier';
+        use HasFactory;
+        
+        //table name
+        protected $table = "supplier";
+        //fields
+         protected $fillable = [
 
-        protected $fillable = [
-            'name',
-            'contact',
-            'address',
-            'contact_person',
-            'category'  
-        ];
-    }
+        'name',
+        'contact',
+        'address',
+        'contact_person',
+        'category',
+
+         ];        
+
 }

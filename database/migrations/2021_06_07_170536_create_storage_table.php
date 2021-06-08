@@ -19,11 +19,13 @@ class CreateStorageTable extends Migration
             $table->string('building');
             $table->string('floor');
             $table->integer('room');
-            $table->string('scabinet');
+            $table->string('cabinet');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
-
+   
+    
     /**
      * Reverse the migrations.
      *

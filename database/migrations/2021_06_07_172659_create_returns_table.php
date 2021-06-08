@@ -15,11 +15,12 @@ class CreateReturnsTable extends Migration
     {
         Schema::create('returns', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('asset_id')->index();
+            $table->integer('asset_id');
             $table->string('returned_by');
             $table->integer('returned_by_contact');
-            $table->string('quantity')->index();
+            $table->integer('quantity');
             $table->string('reason');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

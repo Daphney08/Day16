@@ -17,9 +17,10 @@ class CreateSupplierTable extends Migration
             $table->id();
             $table->string('name');
             $table->integer('contact');
-            $table->longtext('address');
+            $table->string('address');
             $table->string('contact_person');
             $table->string('category');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -8,17 +8,20 @@ use Illuminate\Database\Eloquent\Model;
 class Storage extends Model
 {
     use HasFactory;
+        
+    //table name
+    protected $table = "storage";
+    //fields
+     protected $fillable = [
 
-    public function index();
-    {
-        protected $table ='storage';
+    'name',
+    'building',
+    'floor',
+    'room',
+    'cabinet',
+   
 
-        protected $fillable = [
-            'name',
-            'building',
-            'floor',
-            'room',
-            'scabinet'
-        ];
-    }
+  
+     ];        
+
 }

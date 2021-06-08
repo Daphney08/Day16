@@ -12,7 +12,7 @@ class StorageController extends Controller
 {
     //declare variable
     protected $request;
-    
+
     public function __construct(Request $request)
     {
         $this->request = $request;
@@ -20,18 +20,18 @@ class StorageController extends Controller
 
 
     /**
-     * supplier Data Lists
+     * storage Data Lists
      */
     public function index()
     {
-        return view ('supplier.index')->with([
+        return view ('storage.index')->with([
             'data' => Storage::all()
         ]);
     }
 
 
     /** 
-     * Create New Supplier Form
+     * Create New storage Form
     */
     public function create()
     {
@@ -40,13 +40,13 @@ class StorageController extends Controller
 
 
     /** 
-     * Save New supplier to Database
+     * Save New storage to Database
     */
     public function store()
     {
         Storage::create($this->request->except('_token'));
 
-        # Redirect to supplier list with success message
+        # Redirect to storage list with success message
         return Redirect::route('storage')->with([
             'success' => "New Record is Successfully Created"
         ]);
@@ -54,7 +54,7 @@ class StorageController extends Controller
 
 
     /** 
-     * Edit supplier Record Form
+     * Edit storage Record Form
     */
     public function edit($id){
 
@@ -65,13 +65,13 @@ class StorageController extends Controller
 
 
     /** 
-     * Update supplier Record to Database
+     * Update storage Record to Database
     */
     public function update($id){
         # Find reacord with the parameter $id and update the record
         Storage::where('id', '=', $id)->update($this->request->except('_token'));
 
-        # Redirect to supplier list with success message
+        # Redirect to storage list with success message
         return Redirect::route('storage')->with([
             'success' => "Record is successfully updated"
         ]);
@@ -79,13 +79,13 @@ class StorageController extends Controller
 
 
      /** 
-     * Delete Supplier Record to Database
+     * Delete storage Record to Database
     */
     public function delete($id){
         # Destory Record
         Storage::destroy($id);
 
-        # Redirect to supplier list with success message
+        # Redirect to storage list with success message
         return Redirect::route('storage')->with([
             'success' => "Record is cuccessfully deleted"
         ]);

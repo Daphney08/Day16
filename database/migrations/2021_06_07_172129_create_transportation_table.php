@@ -15,10 +15,11 @@ class CreateTransportationTable extends Migration
     {
         Schema::create('transportation', function (Blueprint $table) {
             $table->id();
-            $table->integer('plate_number');
+            $table->string('plate_number');
             $table->string('driver_name');
             $table->integer('driver_contact');
             $table->string('notes');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

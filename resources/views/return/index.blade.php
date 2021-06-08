@@ -1,14 +1,14 @@
-@php $active = 'supplier' @endphp
+@php $active = 'return' @endphp
 @extends('layout.main')
-@section('title', 'supplier')
+@section('title', 'return')
 @section('content')
 <div class="container">
     <div class="row p-5">
         <div class="col-10">
-            <h1>Supplier</h1>
+            <h1>Return</h1>
         </div>
         <div class="col-2">
-            <a href="/supplier/create" class="btn btn-success">Add New</a>
+            <a href="/return/create" class="btn btn-success">Add New</a>
         </div>
                     <div class="col-12">
                         <hr>    
@@ -28,13 +28,13 @@
                         <div class="col-12 mt-5">
                             <table class="table">
                                 <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Contact</th> 
-                                    <th>Address</th>
-                                    <th>Contact Person</th> 
-                                    <th>Category</th>
-                                    <th>Action</th> 
+                                <tr>                                    
+                                    <th>Asset id</th> 
+                                    <th>Returned By</th>
+                                    <th>Returned by Contact</th> 
+                                    <th>Quantity</th>
+                                    <th>Reason</th>
+                                    
                                 </tr>
                            
                             </thead>
@@ -42,15 +42,16 @@
                                 <!--$x is the -->
                                 @foreach($data as $x)
                                     <tr> 
-                                        <td>{{$x->name}}</td> 
-                                        <td>{{$x->contact}}</td>
-                                        <td>{{$x->address}}</td> 
-                                        <td>{{$x->contact_person}}</td>
-                                        <td>{{$x->category}}</td> 
+                                        <td>{{$x->asset_id}}</td> 
+                                        <td>{{$x->returned_by}}</td>
+                                        <td>{{$x->returned_by_contact}}</td> 
+                                        <td>{{$x->quantity}}</td>
+                                        <td>{{$x->reason}}</td>                                      
+                                      
                                       
                                         <td style="width: 200px;">
-                                            <a href="{{ URL::route('supplier.edit', $x->id) }}" class="btn btn-success btn-sm">Update</a> 
-                                            <a href="{{ URL::route('supplier.delete', $x->id) }}" class="btn btn-danger btn-sm">Delete</a>      
+                                            <a href="{{ URL::route('return.edit', $x->id) }}" class="btn btn-success btn-sm">Update</a> 
+                                            <a href="{{ URL::route('return.delete', $x->id) }}" class="btn btn-danger btn-sm">Delete</a>      
                                         </td> 
                                     </tr>
                                 @endforeach

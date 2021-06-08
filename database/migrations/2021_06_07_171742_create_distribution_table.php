@@ -16,17 +16,15 @@ class CreateDistributionTable extends Migration
         Schema::create('distribution', function (Blueprint $table) {
             $table->id();
             $table->string('requestor_name');
-            $table->string('requestor_contact');
+            $table->integer('requestor_contact');
             $table->string('purpose');
-            $table->unsignedBigInteger('asset_id')->index();
-            $table->string('quantity');
-            $table->enum('Status', [
-                'processing',
-                'declined',
-                'distributed',
+            $table->integer('asset_id');
+            $table->integer('quantity');
+            $table->enum('status' ,[
+                'processing' , 'declined' , 'distributed'
             ]);
+            $table->softDeletes();
             $table->timestamps();
-
         });
     }
 

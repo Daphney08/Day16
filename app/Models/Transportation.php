@@ -8,18 +8,20 @@ use Illuminate\Database\Eloquent\Model;
 class Transportation extends Model
 {
     use HasFactory;
+        
+    //table name
+    protected $table = "transportation";
+    //fields
+     protected $fillable = [
 
-    public function index();
-    {
-        protected $table ='transportation';
+    'plate_number',
+    'driver_name',
+    'driver_contact',
+    'notes',
+    
+   
 
-        protected $fillable = [
-            'plate_number',
-            'driver_name',
-            'driver_contact',
-            'notes'
-          
-           
-        ];
-    }
+  
+     ];        
+
 }
