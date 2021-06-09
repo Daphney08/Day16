@@ -1,38 +1,38 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SupplierController;
+use App\Http\Controllers\AssetsController;
 
 
-Route::get('/asset', [ 
-    SupplierController::class, 'index' 
-    ])->name('asset');
+Route::get('/assets', [ 
+     AssetsController::class, 'index' 
+    ])->name('assets');
 
 
-Route::get('/asset/create', [ 
-    SupplierController::class, 'create'
-     ])->name('asset.create');
-
-
-
-Route::post('/asset/create/save', 
-[ SupplierController::class, 'store' ])
-->name('asset.create.save');
+Route::get('/assets/create', [ 
+     AssetsController::class, 'create'
+     ])->name('assets.create');
 
 
 
-Route::get('/asset/edit/{id}', [
-     SupplierController::class, 'edit' 
-     ])->name('asset.edit');
+Route::post('/assets/create/save', 
+[ AssetsController::class, 'store' ])
+->name('assets.create.save');
 
 
 
-Route::post('/asset/update/{id}', [
-     SupplierController::class, 'update' 
-     ])->name('asset.update');
+Route::get('/assets/edit/{id}', [
+     AssetsController::class, 'edit' 
+     ])->name('assets.edit');
 
 
-Route::get('/asset/delete/{id}', [ 
-    SupplierController::class, 'delete' 
-    ])->name('asset.delete');
+
+Route::post('/assets/update/{id}', [
+     AssetsController::class, 'update' 
+     ])->name('assets.update');
+
+
+Route::get('/assets/delete/{id}', [ 
+     AssetsController::class, 'delete' 
+    ])->name('assets.delete');
 

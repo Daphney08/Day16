@@ -1,14 +1,14 @@
-@php $active = 'transportation' @endphp
+@php $active = 'delivery' @endphp
 @extends('layout.main')
-@section('title', 'transportation')
+@section('title', 'Delivery')
 @section('content')
 <div class="container">
     <div class="row p-5">
         <div class="col-10">
-            <h1>Transportation</h1>
+            <h1>Delivery</h1>
         </div>
         <div class="col-2">
-            <a href="/transportation/create" class="btn btn-success">Add New</a>
+            <a href="/delivery/create" class="btn btn-success">Add New</a>
         </div>
                     <div class="col-12">
                         <hr>    
@@ -29,11 +29,11 @@
                             <table class="table">
                                 <thead>
                                 <tr>                                    
-                                    <th>Plate Number</th> 
-                                    <th>Driver Name</th>
-                                    <th>Driver Contact</th> 
-                                    <th>Notes</th>
-                                    <th>Action</th>
+                                    <th>Distribution Id</th> 
+                                    <th>Transportation Id</th>
+                                    <th>Date Distributed</th> 
+                                    <th>Status</th>
+                                  
                                 </tr>
                            
                             </thead>
@@ -41,15 +41,15 @@
                                 <!--$x is the -->
                                 @foreach($data as $x)
                                     <tr> 
-                                        <td>{{$x->plate_number}}</td> 
-                                        <td>{{$x->driver_name}}</td>
-                                        <td>{{$x->driver_contact}}</td> 
-                                        <td>{{$x->notes}}</td>                                      
+                                        <td>{{$x->distribution_id}}</td> 
+                                        <td>{{$x->transportation_id}}</td>
+                                        <td>{{$x->date_distributed}}</td> 
+                                        <td>{{$x->Status}}</td>                                      
                                       
                                       
                                         <td style="width: 200px;">
-                                            <a href="{{ URL::route('transportation.edit', $x->id) }}" class="btn btn-success btn-sm">Update</a> 
-                                            <a href="{{ URL::route('transportation.delete', $x->id) }}" class="btn btn-danger btn-sm">Delete</a>      
+                                            <a href="{{ URL::route('delivery.edit', $x->id) }}" class="btn btn-success btn-sm">Update</a> 
+                                            <a href="{{ URL::route('delivery.delete', $x->id) }}" class="btn btn-danger btn-sm">Delete</a>      
                                         </td> 
                                     </tr>
                                 @endforeach

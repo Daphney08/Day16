@@ -18,19 +18,19 @@
                             {{-- transportation Input Field --}}
                             <div class="col-md-12">
                                 <label for="transportation" class="form-label">Plate Number</label>
-                                <input type="text"  class="form-control" name="plate_number" value="{{ old('plate_number') }}" required>
+                                <input type="text"  id="transportation" name="plate_number" value="{{ old('plate_number') }}" required>
                             </div> 
                             <div class="col-md-12">
                                 <label for="transportation" class="form-label">Driver Naame</label>
-                                <input type="text" class="form-control" name="driver_name" value="{{ old('driver_name') }}" required>
+                                <input type="text" id="transportation" name="driver_name" value="{{ old('driver_name') }}" required>
                             </div> 
                             <div class="col-md-12">
                                 <label for="transportation" class="form-label">Driver Contact</label>
-                                <input type="text"  class="form-control" name="driver_contact" value="{{ old('driver_contact') }}" required>
+                                <input type="text"  id="transportation" name="driver_contact" value="{{ old('driver_contact') }}" required>
                             </div> 
                             <div class="col-md-12">
                                 <label for="transportation" class="form-label">Notes</label>
-                                <input type="text"  class="form-control" name="notes" value="{{ old('notes') }}" required>
+                                <input type="text"  id="transportation" name="notes" value="{{ old('notes') }}" required>
                             </div> 
                            
                             

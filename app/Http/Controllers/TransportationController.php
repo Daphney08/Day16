@@ -12,7 +12,7 @@ class TransportationController extends Controller
 {
     //declare variable
     protected $request;
-    
+
     public function __construct(Request $request)
     {
         $this->request = $request;
@@ -20,18 +20,18 @@ class TransportationController extends Controller
 
 
     /**
-     * supplier Data Lists
+     * transportation Data Lists
      */
     public function index()
     {
         return view ('transportation.index')->with([
-            'data' => Supplier::all()
+            'data' => Transportation::all()
         ]);
     }
 
 
     /** 
-     * Create New Supplier Form
+     * Create New transportation Form
     */
     public function create()
     {
@@ -40,13 +40,13 @@ class TransportationController extends Controller
 
 
     /** 
-     * Save New supplier to Database
+     * Save New transportation to Database
     */
     public function store()
     {
         Transportation::create($this->request->except('_token'));
 
-        # Redirect to supplier list with success message
+        # Redirect to transportation list with success message
         return Redirect::route('transportation')->with([
             'success' => "New Record is Successfully Created"
         ]);
@@ -54,24 +54,24 @@ class TransportationController extends Controller
 
 
     /** 
-     * Edit supplier Record Form
+     * Edit transportation Record Form
     */
     public function edit($id){
 
-        return view ('supplier.edit')->with([
-            'data' => Supplier::where('id', '=', $id)->first()
+        return view ('transportation.edit')->with([
+            'data' => Transportation::where('id', '=', $id)->first()
         ]);
     }
 
 
     /** 
-     * Update supplier Record to Database
+     * Update transportation Record to Database
     */
     public function update($id){
         # Find reacord with the parameter $id and update the record
         Transportation::where('id', '=', $id)->update($this->request->except('_token'));
 
-        # Redirect to supplier list with success message
+        # Redirect to transportation list with success message
         return Redirect::route('transportation')->with([
             'success' => "Record is successfully updated"
         ]);
@@ -79,15 +79,15 @@ class TransportationController extends Controller
 
 
      /** 
-     * Delete Supplier Record to Database
+     * Delete transportation Record to Database
     */
     public function delete($id){
         # Destory Record
         Transportation::destroy($id);
 
-        # Redirect to supplier list with success message
+        # Redirect to transportation list with success message
         return Redirect::route('transportation')->with([
-            'success' => "Record is cuccessfully deleted"
+            'success' => "Record is successfully deleted"
         ]);
     }
 }

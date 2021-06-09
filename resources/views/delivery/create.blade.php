@@ -1,4 +1,4 @@
-@php $active = 'deliveries' @endphp
+@php $active = 'delivery' @endphp
 @extends('layout.main')
 @section('title', 'Create Delivery')
 @section('content')
@@ -17,20 +17,20 @@
 
                             {{-- Delivery Input Field --}}
                             <div class="col-md-12">
-                                <label for="transportation" class="form-label">Plate Number</label>
-                                <input type="text"  class="form-control" name="plate_number" value="{{ old('plate_number') }}" required>
+                                <label for="delivery" class="form-label">Distribution Id</label>
+                                <input type="number"  id="delivery" name="distribution_id" value="{{ old('distribution_id') }}" required>
                             </div> 
                             <div class="col-md-12">
-                                <label for="transportation" class="form-label">Driver Naame</label>
-                                <input type="text" class="form-control" name="driver_name" value="{{ old('driver_name') }}" required>
+                                <label for="delivery" class="form-label">Transportation_id</label>
+                                <input type="number" id="delivery" name="transportation_id" value="{{ old('transportation_id') }}" required>
                             </div> 
                             <div class="col-md-12">
-                                <label for="transportation" class="form-label">Driver Contact</label>
-                                <input type="text"  class="form-control" name="driver_contact" value="{{ old('driver_contact') }}" required>
+                                <label for="delivery" class="form-label">Date Distributed</label>
+                                <input type="date"  id="delivery" name="date_distributed" value="{{ old('date_distributed') }}" required>
                             </div> 
                             <div class="col-md-12">
-                                <label for="transportation" class="form-label">Notes</label>
-                                <input type="text"  class="form-control" name="notes" value="{{ old('notes') }}" required>
+                                <label for="delivery" class="form-label">Status</label>
+                                <input type="text"  id="delivery" name="Status" value="{{ old('Status') }}" required>
                             </div> 
                            
                             

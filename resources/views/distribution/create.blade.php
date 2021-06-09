@@ -1,6 +1,6 @@
-@php $active = 'assets' @endphp
+@php $active = 'distribution' @endphp
 @extends('layout.main')
-@section('title', 'Create Assets')
+@section('title', 'Create Distribution')
 @section('content')
     <div class="row align-items-center"> 
         <div class="col-12 mt-5">
@@ -8,38 +8,38 @@
                 <div class="card-body row p-5"> 
 
                     <div class="col-12">
-                        <h4>Create Assets</h4>
+                        <h4>Create Distribution</h4>
                     </div>
                     <div class="col-12">
                          {{-- Supplier Form--}}
-                         <form class =" row g-3 " action="{{ URL::route('assets.create.save') }}" method="post">
+                         <form class =" row g-3 " action="{{ URL::route('distribution.create.save') }}" method="post">
                             @csrf
 
                             {{-- assets Input Field --}}
                             <div class="col-md-12">
-                                <label for="assets" class="form-label">Name</label>
-                                <input type="text" id="assets" class="form-control" name="name" value="{{ old('name') }}" required>
+                                <label for="distribution" class="form-label">Name</label>
+                                <input type="text" id="distribution" class="form-control" name="name" value="{{ old('name') }}" required>
                             </div> 
                             <div class="col-md-12">
-                                <label for="assets" class="form-label">Description</label>
-                                <input type="text" id="assets" class="form-control" name="description" value="{{ old('description') }}" required>
+                                <label for="distribution" class="form-label">Description</label>
+                                <input type="text" id="distribution" class="form-control" name="description" value="{{ old('description') }}" required>
                             </div> 
                             <div class="col-md-12">
-                                <label for="assets" class="form-label">Category</label>
-                                <input type="text" id="assets" class="form-control" name="category" value="{{ old('category') }}" required>
+                                <label for="distribution" class="form-label">Category</label>
+                                <input type="text" id="distribution" class="form-control" name="category" value="{{ old('category') }}" required>
                             </div> 
                             <div class="col-md-12">
-                                <label for="assets" class="form-label">Supplier id</label>
-                                <input type="number" id="assets" class="form-control" name="supplier_id" value="{{ old('supplier_id') }}" required>
+                                <label for="distribution" class="form-label">Supplier id</label>
+                                <input type="number" id="distribution" class="form-control" name="supplier_id" value="{{ old('supplier_id') }}" required>
                             </div> 
                             <div class="col-md-12">
-                                <label for="assets" class="form-label">Storage id</label>
-                                <input type="number" id="assets" class="form-control" name="storage_id" value="{{ old('storage_id') }}" required>
+                                <label for="distribution" class="form-label">Storage id</label>
+                                <input type="number" id="distribution" class="form-control" name="storage_id" value="{{ old('storage_id') }}" required>
                             </div> 
                             </div> 
                             <div class="col-md-12">
-                                <label for="assets" class="form-label">Total Stocks</label>
-                                <input type="number" id="assets" class="form-control" name="total_stocks" value="{{ old('total_stocks') }}" required>
+                                <label for="distribution" class="form-label">Total Stocks</label>
+                                <input type="number" id="distribution" class="form-control" name="total_stocks" value="{{ old('total_stocks') }}" required>
                             </div> 
                             
                             

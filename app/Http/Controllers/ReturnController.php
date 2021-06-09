@@ -43,7 +43,7 @@ class ReturnController extends Controller
     */
     public function store()
     {
-        Transportation::create($this->request->except('_token'));
+        Returns::create($this->request->except('_token'));
 
         # Redirect to transportation list with success message
         return Redirect::route('return')->with([
@@ -82,7 +82,7 @@ class ReturnController extends Controller
     */
     public function delete($id){
         # Destory Record
-        Transportation::destroy($id);
+        Returns::destroy($id);
 
         # Redirect to transportation list with success message
         return Redirect::route('return')->with([

@@ -18,19 +18,19 @@
                             {{-- Transportation Input Field --}}
                             <div class="col-md-12">
                                 <label for="transportation" class="form-label">Plate Number</label>
-                                <input type="text" id="assets" class="form-control" name="plate_number" value="{{ $data->plate_number }}" required>
+                                <input type="text" id="transportation" class="form-control" name="plate_number" value="{{ $data->plate_number }}" required>
                             </div> 
                             <div class="col-md-12">
                                 <label for="transportation" class="form-label">Driver Naame</label>
-                                <input type="text" id="assets" class="form-control" name="driver_name" value="{{ $data->driver_name }}" required>
+                                <input type="text" id="transportation" class="form-control" name="driver_name" value="{{ $data->driver_name }}" required>
                             </div> 
                             <div class="col-md-12">
                                 <label for="transportation" class="form-label">Driver Contact</label>
-                                <input type="text" id="assets" class="form-control" name="driver_contact" value="{{ $data->driver_contact }}" required>
+                                <input type="text" id="transportation" class="form-control" name="driver_contact" value="{{ $data->driver_contact }}" required>
                             </div> 
                             <div class="col-md-12">
                                 <label for="transportation" class="form-label">Notes</label>
-                                <input type="text" id="assets" class="form-control" name="notes" value="{{ $data->notes }}" required>
+                                <input type="text" id="transportation" class="form-control" name="notes" value="{{ $data->notes }}" required>
                             </div> 
                             {{-- End Transportation Input Field --}}
                         

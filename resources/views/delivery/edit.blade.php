@@ -1,6 +1,6 @@
-@php $active = 'transportation' @endphp
+@php $active = 'delivery' @endphp
 @extends('layout.main')
-@section('title', 'Create Transportation')
+@section('title', 'Create Delivery')
 @section('content')
     <div class="row align-items-center"> 
         <div class="col-12 mt-5">
@@ -8,31 +8,31 @@
                 <div class="card-body row p-5"> 
 
                     <div class="col-12">
-                        <h4>Edit Transportation</h4>
+                        <h4>Edit Delivery</h4>
                     </div>
                     <div class="col-12">
-                         {{-- Transportation Form--}}
-                         <form class =" row g-3 " action="{{ URL::route('transportation.update', ['id' => $data->id ]) }}" method="post">
+                         {{-- Delivery Form--}}
+                         <form class =" row g-3 " action="{{ URL::route('delivery.update', ['id' => $data->id ]) }}" method="post">
                             @csrf
 
-                            {{-- Transportation Input Field --}}
+                            {{-- Delivery Input Field --}}
                             <div class="col-md-12">
-                                <label for="transportation" class="form-label">Plate Number</label>
-                                <input type="text" id="assets" class="form-control" name="plate_number" value="{{ $data->plate_number }}" required>
+                                <label for="delivery" class="form-label">Distribution Id</label>
+                                <input type="number" id="delivery" class="form-control" name="distribution_id" value="{{ $data->distribution_id }}" required>
                             </div> 
                             <div class="col-md-12">
-                                <label for="transportation" class="form-label">Driver Naame</label>
-                                <input type="text" id="assets" class="form-control" name="driver_name" value="{{ $data->driver_name }}" required>
+                                <label for="delivery" class="form-label">Transportation_id</label>
+                                <input type="number" id="delivery" class="form-control" name="transportation_id" value="{{ $data->transportation_id }}" required>
                             </div> 
                             <div class="col-md-12">
-                                <label for="transportation" class="form-label">Driver Contact</label>
-                                <input type="text" id="assets" class="form-control" name="driver_contact" value="{{ $data->driver_contact }}" required>
+                                <label for="delivery" class="form-label">Date Distributed</label>
+                                <input type="date" id="delivery" class="form-control" name="date_distributed" value="{{ $data->date_distributed }}" required>
                             </div> 
                             <div class="col-md-12">
-                                <label for="transportation" class="form-label">Notes</label>
-                                <input type="text" id="assets" class="form-control" name="notes" value="{{ $data->notes }}" required>
+                                <label for="delivery" class="form-label">Status</label>
+                                <input type="text" id="delivery" class="form-control" name="Status" value="{{ $data->Status }}" required>
                             </div> 
-                            {{-- End Transportation Input Field --}}
+                            {{-- End delivery Input Field --}}
                         
                             {{-- Submit and Cancel Button --}}
                             <div class="col-12">

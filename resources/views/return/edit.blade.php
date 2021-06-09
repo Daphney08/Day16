@@ -1,4 +1,4 @@
-@php $active = 'return' @endphp
+@php $active = 'returns' @endphp
 @extends('layout.main')
 @section('title', 'Create Retrun')
 @section('content')
@@ -18,23 +18,23 @@
                             {{-- Return Input Field --}}
                             <div class="col-md-12">
                                 <label for="return" class="form-label">Asset id</label>
-                                <input type="integer"  class="form-control" name="asset_id" value="{{ old('asset_id') }}" required>
+                                <input type="number"  id="return" name="asset_id" value="{{ old('asset_id') }}" required>
                             </div> 
                             <div class="col-md-12">
                                 <label for="return" class="form-label">Returned By</label>
-                                <input type="text" class="form-control" name="returned_by" value="{{ old('returned_by') }}" required>
+                                <input type="text" id="return" name="returned_by" value="{{ old('returned_by') }}" required>
                             </div> 
                             <div class="col-md-12">
                                 <label for="return" class="form-label">Returned by Contact</label>
-                                <input type="integer"  class="form-control" name="returned_by_contact" value="{{ old('returned_by_contact') }}" required>
+                                <input type="number"  id="return" name="returned_by_contact" value="{{ old('returned_by_contact') }}" required>
                             </div> 
                             <div class="col-md-12">
                                 <label for="return" class="form-label">Quantity</label>
-                                <input type="text"  class="form-control" name="quantity" value="{{ old('quantity') }}" required>
+                                <input type="text"  id="return" name="quantity" value="{{ old('quantity') }}" required>
                             </div> 
                             <div class="col-md-12">
                                 <label for="return" class="form-label">Reason</label>
-                                <input type="text"  class="form-control" name="reason" value="{{ old('reason') }}" required>
+                                <input type="text"  id="return" name="reason" value="{{ old('reason') }}" required>
                             </div> 
                             {{-- End return Input Field --}}
                         
