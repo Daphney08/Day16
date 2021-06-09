@@ -2,7 +2,7 @@
 @extends('layout.main')
 @section('title', 'assets')
 @section('content')
-<div class="container">
+<div class="row align-items-center"> 
     <div class="row p-5">
         <div class="col-10">
             <h1>Assets</h1>

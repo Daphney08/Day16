@@ -1,4 +1,4 @@
-@php $active = 'returns' @endphp
+@php $active = 'return' @endphp
 @extends('layout.main')
 @section('title', 'Create Retrun')
 @section('content')

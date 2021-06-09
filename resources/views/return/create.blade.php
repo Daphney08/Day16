@@ -1,4 +1,4 @@
-@php $active = 'returns' @endphp
+@php $active = 'return' @endphp
 @extends('layout.main')
 @section('title', 'Create Return')
 @section('content')
@@ -39,14 +39,14 @@
                            
                             
                             
-                            {{-- End assets Input Field --}}
+                            {{-- End Return Input Field --}}
                         
                             {{-- Submit and Cancel Button --}}
                             <div class="col-12">
                                 <button type="submit" class="btn btn-primary">Save</button>
                             </div> {{-- End Submit and Cancel Button --}}
                             
-                        </form> {{-- End Supplier Form--}}
+                        </form> {{-- End Return Form--}}
                     </div>
                 </div>
             </div> 

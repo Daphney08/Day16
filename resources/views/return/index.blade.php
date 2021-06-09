@@ -1,4 +1,4 @@
-@php $active = 'returns' @endphp
+@php $active = 'return' @endphp
 @extends('layout.main')
 @section('title', 'return')
 @section('content')
@@ -6,7 +6,7 @@
     <div class="row p-5">
         <div class="col-10">
             <h1>Return</h1>
-        </div>
+        </div> 
         <div class="col-2">
             <a href="/return/create" class="btn btn-success">Add New</a>
         </div>

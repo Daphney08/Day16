@@ -21,7 +21,7 @@
                                 <input type="text"  id="transportation" name="plate_number" value="{{ old('plate_number') }}" required>
                             </div> 
                             <div class="col-md-12">
-                                <label for="transportation" class="form-label">Driver Naame</label>
+                                <label for="transportation" class="form-label">Driver Name</label>
                                 <input type="text" id="transportation" name="driver_name" value="{{ old('driver_name') }}" required>
                             </div> 
                             <div class="col-md-12">

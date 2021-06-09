@@ -1,6 +1,6 @@
-@php $active = 'supplier' @endphp
+@php $active = 'storage' @endphp
 @extends('layout.main')
-@section('title', 'Create Supplier')
+@section('title', 'Create Storage')
 @section('content')
     <div class="row align-items-center"> 
         <div class="col-12 mt-5">
@@ -11,7 +11,7 @@
                         <h4>Edit Storage</h4>
                     </div>
                     <div class="col-12">
-                         {{-- Supplier Form--}}
+                         {{-- Storage Form--}}
                          <form class =" row g-3 " action="{{ URL::route('storage.update', ['id' => $data->id ]) }}" method="post">
                             @csrf
 
@@ -46,7 +46,7 @@
                                 <button type="submit" class="btn btn-primary">Save</button>
                             </div> {{-- End Submit and Cancel Button --}}
                             
-                        </form> {{-- End Supplier Form--}}
+                        </form> {{-- End Storage Form--}}
                     </div>
                 </div>
             </div> 

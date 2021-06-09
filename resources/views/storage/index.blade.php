@@ -33,7 +33,7 @@
                                     <th>Floor</th>
                                     <th>Room</th> 
                                     <th>Cabinet</th>
-                                    <th>Action</th> 
+                                     
                                 </tr>
                            
                             </thead>

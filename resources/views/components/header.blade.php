@@ -25,7 +25,8 @@
                                     Supplier </a>
                             </li>
                             <li class="nav-item">
-                                <a href="/storage" class=" text-black nav-link  @if($active=='storage') active @endif">
+                                <a href="/storage" 
+                                class=" text-black nav-link  @if($active=='storage') active @endif">
                                     Storage </a>
                             </li>
                             <li class="nav-item">
@@ -43,15 +44,19 @@
                                     Transportation </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Deliveries</a>
+                                <a href="/delivery" 
+                                class="nav-link active @if($active=='deliveries') active @endif">
+                                Deliveries</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Returns</a>
+                                <a href="/return" 
+                                class="nav-link active @if($active=='returns') active @endif">
+                                Return</a>
                             </li>
-                        </ul>
+                            
                         <form class="d-flex">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
+                            <button class="btn btn-success" type="submit">Search</button>
                         </form>
                     </div>
                 </div>

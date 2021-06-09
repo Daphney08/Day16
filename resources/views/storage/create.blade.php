@@ -11,11 +11,11 @@
                         <h4>Create Storage</h4>
                     </div>
                     <div class="col-12">
-                         {{-- Supplier Form--}}
+                         {{-- Storage Form--}}
                          <form class =" row g-3 " action="{{ URL::route('storage.create.save') }}" method="post">
                             @csrf
 
-                            {{-- Supplier Input Field --}}
+                            {{-- Storage Input Field --}}
                             <div class="col-md-12">
                                 <label for="storage" class="form-label">Name</label>
                                 <input type="text" id="storage" class="form-control" name="name" value="{{ old('name') }}" required>
@@ -45,7 +45,7 @@
                                 <button type="submit" class="btn btn-primary">Save</button>
                             </div> {{-- End Submit and Cancel Button --}}
                             
-                        </form> {{-- End Supplier Form--}}
+                        </form> {{-- End Storage Form--}}
                     </div>
                 </div>
             </div> 

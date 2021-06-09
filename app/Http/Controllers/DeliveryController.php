@@ -24,7 +24,7 @@ class DeliveryController extends Controller
     public function index()
     {
         return view ('delivery.index')->with([
-            'data' => Deliver::all()
+            'data' => Deliveries::all()
         ]);
     }
 
